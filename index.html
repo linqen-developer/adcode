@@ -468,14 +468,13 @@
         'https://open.kakao.com/o/sO0dz1gh',
         'https://open.kakao.com/o/sFA8A1gh'
     ];
-    let currentIndex = 0;
     const linkElement = document.getElementById('rotatingLink');
 
     linkElement.addEventListener('click', function(e) {
-        e.preventDefault(); 
-        window.open(links[currentIndex], '_blank'); 
-        currentIndex = (currentIndex + 1) % links.length; 
-        linkElement.href = links[currentIndex]; 
+        e.preventDefault();      
+        const randomIndex = Math.floor(Math.random() * links.length);
+        window.open(links[randomIndex], '_blank'); 
+        linkElement.href = links[randomIndex]; 
     });
 </script>
 
