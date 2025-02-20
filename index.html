@@ -337,7 +337,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
         <p class="text-base text-gray-600 leading-relaxed mb-6">
-          "브랜드 광고 후 연매출 200억원 달성, 전년 대비 500% 성장"
+          "브랜드 광고 후 연매출 200억원 달성, 전년 대비 500% 성장!"
         </p>
         <div class="text-right text-xs text-gray-500 font-semibold">
           - 실제 XX마켓 사례
@@ -345,7 +345,7 @@
       </div>
       <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
         <p class="text-base text-gray-600 leading-relaxed mb-6">
-          "트래픽 발생 20만건, 유료결제 수 1.5만건, 쇼핑몰 관심등록 1.8만건 등등"
+          "트래픽 발생 20만건, 유료결제 수 1.5만건 증가!"
         </p>
         <div class="text-right text-xs text-gray-500 font-semibold">
           - 실제 A기업 사례
@@ -474,8 +474,7 @@
     const linkElement = document.getElementById('rotatingLink');
 
     linkElement.addEventListener('click', function(e) {
-        e.preventDefault(); 
-        // 0, 1, 2 중 랜덤한 숫자 생성
+        e.preventDefault();         
         const randomIndex = Math.floor(Math.random() * links.length);
         window.open(links[randomIndex], '_blank'); 
         linkElement.href = links[randomIndex]; 
@@ -483,7 +482,7 @@
 </script>
 
 <script>
-    // 로고 클릭 시 부드러운 스크롤
+    
     document.querySelector('a[href="#hero"]').addEventListener('click', function(e) {
         e.preventDefault();
         window.scrollTo({
