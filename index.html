@@ -25,10 +25,10 @@
 <body class="antialiased text-gray-800">
   <!-- Header -->
   <header class="fixed top-0 z-50 w-full bg-white shadow-sm">
-    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto flex h-20 md:h-16 max-w-7xl items-center justify-between px-6 sm:px-6 lg:px-8">
       <!-- Logo -->
       <a href="#hero" class="scroll-smooth">
-        <img src="adcode_logo.png" alt="adcode_logo" class="w-20 h-auto object-cover">
+        <img src="adcode_logo.png" alt="adcode_logo" class="w-24 md:w-20 h-auto object-cover">
       </a>
 
       <!-- Nav menu (desktop) -->
@@ -39,11 +39,11 @@
         <a href="#contact" class="bg-red-600 font-medium text-white px-4 py-2 rounded-full">문의하기</a>
       </nav>
 
-      <!-- Mobile menu button (icon only) -->
+      <!-- Mobile menu button -->
       <button class="md:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
              viewBox="0 0 24 24" stroke="currentColor" 
-             class="h-6 w-6 text-red-600">
+             class="h-8 md:h-6 w-8 md:w-6 text-red-600">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                 d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -60,16 +60,19 @@
     </div>
 
     <!-- Content -->
-    <div class="relative z-10 max-w-3xl px-4 text-center text-white">
-      <h1 class="mb-4 text-3xl font-bold sm:text-5xl leading-16">
+    <div class="relative z-10 max-w-3xl px-6 md:px-4 text-center text-white">
+      <h1 class="mb-6 md:mb-4 text-4xl md:text-3xl font-bold leading-tight">
         <span class="text-red-600 font-bold">브랜드를</span> 일상에 스며들게,<br class="hidden sm:block"/> 
         <span class="block mt-4">공감을 행동으로</span>
       </h1>
-      <p class="mb-6 text-base sm:text-3xl">
-        공감을 설계하고 행동을 유도하는 캠페인,<br><span class="block mt-1"><span class="text-red-600 font-bold text-4xl">애드코드(ADCODE)</span>의 전략입니다.</span>
+      <p class="mb-8 md:mb-6 text-xl md:text-base sm:text-3xl">
+        공감을 설계하고 행동을 유도하는 캠페인,<br>
+        <span class="block mt-1">
+          <span class="text-red-600 font-bold text-4xl">애드코드(ADCODE)</span>의 전략입니다.
+        </span>
       </p>
       <a href="#about" 
-         class="inline-block rounded-full border-2 border-white px-4 py-3 text-base font-medium hover:bg-white hover:text-red-600 transition hover:border-red-600">
+         class="inline-block rounded-full border-2 border-white px-6 md:px-4 py-4 md:py-3 text-lg md:text-base font-medium hover:bg-white hover:text-red-600 transition hover:border-red-600">
         자세히 알아보기
       </a>
     </div>
@@ -77,16 +80,16 @@
 
   <!-- 2) About Section -->
   <section id="about" class="py-16 bg-gray-50">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 fade-in">
+    <div class="mx-auto max-w-6xl px-6 md:px-4 sm:px-6 lg:px-8 fade-in">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
-          <h2 class="text-3xl font-bold text-red-600 mb-4">About ADCODE</h2>
-          <p class="text-gray-700 leading-relaxed mb-4">
+          <h2 class="text-4xl md:text-3xl font-bold text-red-600 mb-6 md:mb-4">About ADCODE</h2>
+          <p class="text-lg md:text-base text-gray-700 leading-relaxed mb-6 md:mb-4">
             ADCODE는 통합 디지털 마케팅 전략 수립, 퍼포먼스 마케팅 최적화,<br> 
             소셜미디어 마케팅, 브랜드 아이덴티티 구축 등<br>
             전 분야를 아우르는 전문가 그룹입니다.
           </p>
-          <p class="text-gray-700 leading-relaxed">
+          <p class="text-lg md:text-base text-gray-700 leading-relaxed">
             업계 4년 이상의 경력을 보유하고, 빅데이터 분석과 최신 트렌드를 통해  
             브랜드 가치를 극대화하는 솔루션을 제공합니다.
           </p>
@@ -334,7 +337,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
         <p class="text-base text-gray-600 leading-relaxed mb-6">
-          "브랜드 광고 후 연매출 200억원 달성, 전년 대비 500% 성장!"
+          "브랜드 광고 후 연매출 200억원 달성, 전년 대비 500% 성장"
         </p>
         <div class="text-right text-xs text-gray-500 font-semibold">
           - 실제 XX마켓 사례
@@ -342,7 +345,7 @@
       </div>
       <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
         <p class="text-base text-gray-600 leading-relaxed mb-6">
-          "트래픽 발생 20만건, 유료결제 수 1.5만건 증가!"
+          "트래픽 발생 20만건, 유료결제 수 1.5만건, 쇼핑몰 관심등록 1.8만건 등등"
         </p>
         <div class="text-right text-xs text-gray-500 font-semibold">
           - 실제 A기업 사례
@@ -471,7 +474,8 @@
     const linkElement = document.getElementById('rotatingLink');
 
     linkElement.addEventListener('click', function(e) {
-        e.preventDefault();      
+        e.preventDefault(); 
+        // 0, 1, 2 중 랜덤한 숫자 생성
         const randomIndex = Math.floor(Math.random() * links.length);
         window.open(links[randomIndex], '_blank'); 
         linkElement.href = links[randomIndex]; 
@@ -479,6 +483,7 @@
 </script>
 
 <script>
+    // 로고 클릭 시 부드러운 스크롤
     document.querySelector('a[href="#hero"]').addEventListener('click', function(e) {
         e.preventDefault();
         window.scrollTo({
