@@ -20,30 +20,50 @@
       opacity: 1;
       transform: translateY(0);
     }
+    /* 로고 이미지 필터 (흰색으로 변경) */
+    .white-filter {
+        filter: brightness(0) invert(1);
+    }
+    
+    /* 투명 헤더 스타일 */
+    .header-transparent {
+        background-color: transparent;
+    }
+    
+    /* 불투명 헤더 스타일 */
+    .header-solid {
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    /* 흰색 텍스트 */
+    .text-white-important {
+        color: white !important;
+    }
   </style>
 </head>
 <body class="antialiased text-gray-800">
   <!-- Header -->
-  <header class="fixed top-0 z-50 w-full bg-white shadow-sm">
+  <header class="fixed top-0 z-50 w-full transition-all duration-300 header-transparent">
     <div class="mx-auto flex h-20 md:h-16 max-w-7xl items-center justify-between px-6 sm:px-6 lg:px-8">
       <!-- Logo -->
       <a href="#hero" class="scroll-smooth">
-        <img src="adcode_logo.png" alt="adcode_logo" class="w-24 md:w-20 h-auto object-cover">
+        <img src="adcode_logo.png" alt="adcode_logo" class="w-24 md:w-20 h-auto object-cover white-filter">
       </a>
 
       <!-- Nav menu (desktop) -->
       <nav class="hidden space-x-8 md:flex items-center">
-        <a href="#about" class="text-base font-medium text-gray-700 hover:text-red-600">브랜드</a>
-        <a href="#strengths" class="text-base font-medium text-gray-700 hover:text-red-600">특징</a>
-        <a href="#services" class="text-base font-medium text-gray-700 hover:text-red-600">서비스</a>
-        <a href="#contact" class="bg-red-600 font-medium text-white px-4 py-2 rounded-full">문의하기</a>
+        <a href="#about" class="text-base font-medium text-white hover:text-red-600 nav-link text-white-important">브랜드</a>
+        <a href="#strengths" class="text-base font-medium text-white hover:text-red-600 nav-link text-white-important">특징</a>
+        <a href="#services" class="text-base font-medium text-white hover:text-red-600 nav-link text-white-important">서비스</a>
+        <a href="#contact" class="bg-red-500 font-medium text-white px-4 py-2 rounded-full">문의하기</a>
       </nav>
 
       <!-- Mobile menu button -->
       <button class="md:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
              viewBox="0 0 24 24" stroke="currentColor" 
-             class="h-8 md:h-6 w-8 md:w-6 text-red-600">
+             class="h-8 md:h-6 w-8 md:w-6 text-white nav-icon text-white-important">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                 d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -61,16 +81,11 @@
 
     <!-- Content -->
     <div class="relative z-10 max-w-3xl px-6 md:px-4 text-center text-white">
-      <h1 class="mb-6 md:mb-4 text-4xl md:text-3xl font-bold leading-tight">
-        <span class="text-red-600 font-bold">브랜드를</span> 일상에 스며들게,<br class="hidden sm:block"/> 
+      <h1 class="mb-6 md:mb-10 text-6xl md:text-6xl font-bold leading-tight">
+        <span class="text-red-500 font-bold">브랜드를</span> 일상에 스며들게,<br class="hidden sm:block"/> 
         <span class="block mt-4">공감을 행동으로</span>
       </h1>
-      <p class="mb-8 md:mb-6 text-xl md:text-base sm:text-3xl">
-        공감을 설계하고 행동을 유도하는 캠페인,<br>
-        <span class="block mt-1">
-          <span class="text-red-600 font-bold text-4xl">애드코드(ADCODE)</span>의 전략입니다.
-        </span>
-      </p>
+
       <a href="#about" 
          class="inline-block rounded-full border-2 border-white px-6 md:px-4 py-4 md:py-3 text-lg md:text-base font-medium hover:bg-white hover:text-red-600 transition hover:border-red-600">
         자세히 알아보기
@@ -83,14 +98,16 @@
     <div class="mx-auto max-w-6xl px-6 md:px-4 sm:px-6 lg:px-8 fade-in">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
-          <h2 class="text-4xl md:text-3xl font-bold text-red-600 mb-6 md:mb-4">About ADCODE</h2>
-          <p class="text-lg md:text-base text-gray-700 leading-relaxed mb-6 md:mb-4">
-            ADCODE는 통합 디지털 마케팅 전략 수립, 퍼포먼스 마케팅 최적화,<br> 
-            소셜미디어 마케팅, 브랜드 아이덴티티 구축 등<br>
-            전 분야를 아우르는 전문가 그룹입니다.
+          <h2 class="text-4xl md:text-3xl font-bold text-red-500 mb-6 md:mb-4">About ADCODE</h2>
+          <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6 md:mb-4">
+            ADCODE는 통합 디지털 마케팅 전략 수립,<br>
+            퍼포먼스 마케팅 최적화, 소셜미디어 마케팅,<br>
+            브랜드 아이덴티티 구축 등<br><br>
+            전 분야를 아우르는 전문가 그룹입니다.<br>
           </p>
-          <p class="text-lg md:text-base text-gray-700 leading-relaxed">
-            업계 4년 이상의 경력을 보유하고, 빅데이터 분석과 최신 트렌드를 통해  
+          <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+            <br>업계 4년 이상의 경력을 보유하고, <br>
+            빅데이터 분석과 최신 트렌드를 통해 <br>
             브랜드 가치를 극대화하는 솔루션을 제공합니다.
           </p>
         </div>
@@ -107,49 +124,49 @@
    <!-- 3) Marketing Approach -->
    <section id="process" class="py-16 bg-gray-100">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 fade-in">
-      <h2 class="text-3xl font-bold text-center text-red-600 mb-12">마케팅 전략</h2>
+      <h2 class="text-3xl font-bold text-center text-red-500 mb-12">마케팅 전략</h2>
       <div class="relative border-l-4 border-red-600 pl-8 space-y-8">
         <div class="flex items-start">
           <div class="flex-shrink-0">
-            <div class="w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center font-bold">1</div>
+            <div class="w-10 h-10 rounded-full bg-red-500 text-white flex items-center justify-center font-bold">1</div>
           </div>
           <div class="ml-4">
-            <h3 class="text-lg font-semibold text-gray-700">빅데이터 분석</h3>
-            <p class="text-base text-gray-600">
-              시장·소비자·경쟁사를 다각도로 분석하여 가장 효과적인 마케팅 전략의 기틀을 마련합니다.
+            <h3 class="text-xl font-semibold text-gray-700">빅데이터 분석</h3>
+            <p class="text-xl text-gray-600">
+              시장·소비자·경쟁사를 다각도로 분석하여 가장 효과적인 마케팅 전략의 기틀 구축.
             </p>
           </div>
         </div>
         <div class="flex items-start">
           <div class="flex-shrink-0">
-            <div class="w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center font-bold">2</div>
+            <div class="w-10 h-10 rounded-full bg-red-500 text-white flex items-center justify-center font-bold">2</div>
           </div>
           <div class="ml-4">
-            <h3 class="text-lg font-semibold text-gray-700">전략 수립</h3>
-            <p class="text-base text-gray-600">
-              브랜드 아이덴티티와 목표를 명확히 설정하고, 채널별 운영 가이드와 KPI를 구체화합니다.
+            <h3 class="text-xl font-semibold text-gray-700">전략 수립</h3>
+            <p class="text-xl text-gray-600">
+              브랜드 아이덴티티와 목표를 명확히 설정하고, 채널별 운영 가이드와 KPI 구체화.
             </p>
           </div>
         </div>
         <div class="flex items-start">
           <div class="flex-shrink-0">
-            <div class="w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center font-bold">3</div>
+            <div class="w-10 h-10 rounded-full bg-red-500 text-white flex items-center justify-center font-bold">3</div>
           </div>
           <div class="ml-4">
-            <h3 class="text-lg font-semibold text-gray-700">실행 &amp; 운영</h3>
-            <p class="text-base text-gray-600">
-              바이럴·SNS·검색광고 등 통합 운영을 통해 시너지를 극대화하고 운영 효율을 높입니다.
+            <h3 class="text-xl font-semibold text-gray-700">실행 &amp; 운영</h3>
+            <p class="text-xl text-gray-600">
+              바이럴·SNS·검색광고 등 통합운영을 통해 시너지 극대화 및 운영효율 향상.
             </p>
           </div>
         </div>
         <div class="flex items-start">
           <div class="flex-shrink-0">
-            <div class="w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center font-bold">4</div>
+            <div class="w-10 h-10 rounded-full bg-red-500 text-white flex items-center justify-center font-bold">4</div>
           </div>
           <div class="ml-4">
-            <h3 class="text-lg font-semibold text-gray-700">모니터링 &amp; 최적화</h3>
-            <p class="text-base text-gray-600">
-              실시간 데이터를 기반으로 ROAS(광고수익률)를 지속적으로 분석·개선하여 높은 성과를 유지합니다.
+            <h3 class="text-xl font-semibold text-gray-700">모니터링 &amp; 최적화</h3>
+            <p class="text-xl text-gray-600">
+              실시간 데이터를 기반으로 ROAS(광고수익률)를 지속적으로 분석·개선.
             </p>
           </div>
         </div>
@@ -160,7 +177,7 @@
     <!-- 4) Stats / Achievements Section -->
     <section id="stats" class="py-16 bg-white">
       <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 fade-in">        
-        <h2 class="text-3xl font-bold text-center text-red-600 mb-12">ADCODE의 성과</h2>
+        <h2 class="text-3xl font-bold text-center text-red-500 mb-12">ADCODE의 성과</h2>
         <p class="text-center mb-8 text-xl">우리는 고객의 성공을 위해 최선을 다하고 있습니다. 우리의 성과는 고객의 만족으로 이어집니다.</p>
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
           <!-- Achievement: 30억 원+ -->
@@ -189,7 +206,7 @@
   <!-- 5) Key Strengths Section  -->
   <section id="strengths" class="py-16 bg-gray-50">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 fade-in">      
-      <h2 class="text-3xl font-bold text-center text-red-600 mb-14">ADCODE만의 노하우</h2>
+      <h2 class="text-3xl font-bold text-center text-red-500 mb-14">ADCODE만의 노하우</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
         <div class="bg-white rounded-lg shadow hover:shadow-md transition p-0 w-full">
           <div class="flex justify-center mb-0">
@@ -198,7 +215,7 @@
               alt="빅데이터" 
               class="h-64 w-full object-cover rounded-t-lg" />
           </div>
-          <h3 class="mt-4 mb-2 text-lg font-semibold text-gray-700 text-center">빅데이터 기반</h3>
+          <h3 class="mt-4 mb-2 text-xl font-semibold text-gray-700 text-center">빅데이터 기반</h3>
           <p class="mb-4 text-base text-gray-600 leading-relaxed text-center py-5 px-4">
             데이터를 기반으로 정밀하게 타겟팅하여 광고 효과를 극대화합니다. 광고 성과를 분석하고 지속적으로 최적화해 
             <br>투자 대비 높은 결과를 제공합니다.
@@ -211,7 +228,7 @@
               alt="브랜드 아이덴티티" 
               class="h-64 w-full object-cover rounded-t-lg" />
           </div>
-          <h3 class="mt-4 mb-2 text-lg font-semibold text-gray-700 text-center">브랜드 아이덴티티 구축</h3>
+          <h3 class="mt-4 mb-2 text-xl font-semibold text-gray-700 text-center">브랜드 아이덴티티 구축</h3>
           <p class="text-base text-gray-600 leading-relaxed text-center py-5 px-4">
             차별화된 전략과 명확한 메시지로 브랜드 가치를 높여드립니다.
             <br>기업의 정체성을 확립하고,꾸준히 성장할 수 있는<br>기반을 만들어 갑니다.
@@ -224,7 +241,7 @@
               alt="퍼포먼스 마케팅" 
               class="h-64 w-full object-cover rounded-t-lg" />
           </div>
-          <h3 class="mt-4 mb-2 text-lg font-semibold text-gray-700 text-center">성과 중심 마케팅</h3>
+          <h3 class="mt-4 mb-2 text-xl font-semibold text-gray-700 text-center">성과 중심 마케팅</h3>
           <p class="text-base text-gray-600 leading-relaxed text-center py-6 px-4">
             검색 최적화된 글을 통해 브랜드를 자연스럽게 알리고<br>노출 효과를 극대화합니다. 전략적인 콘텐츠 배포로<br>브랜드 신뢰도를 높이고 구매로 이어지도록 돕습니다.
           </p>
@@ -236,7 +253,7 @@
               alt="소셜 미디어 전문성" 
               class="h-64 w-full object-cover rounded-t-lg" />
           </div>
-          <h3 class="mt-4 mb-2 text-lg font-semibold text-gray-700 text-center">소셜 미디어 전문성</h3>
+          <h3 class="mt-4 mb-2 text-xl font-semibold text-gray-700 text-center">소셜 미디어 전문성</h3>
           <p class="text-base text-gray-600 leading-relaxed text-center py-6 px-4">
             정확한 정보 제공과 키워드 최적화로<br>검색 결과에서 더 잘 보이도록 만듭니다.<br>관리부터 최신 트렌드 반영까지, 효과를 극대화합니다.
           </p>
@@ -250,7 +267,7 @@
 <!-- 6) Main Services Section -->
 <section id="services" class="py-16 bg-white">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-center text-red-600 mb-12">서비스</h2>
+    <h2 class="text-3xl font-bold text-center text-red-500 mb-12"> ADCODE만의 서비스</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       
@@ -357,13 +374,23 @@
 
 
 <!-- 8) Services report -->
-  <section id="contact" class="contact-section py-16 bg-white">
-    <h2 class="text-2xl font-bold text-center mb-4">더 궁금하신 점이 있으신가요?</h2>
-    <p class="text-center mb-8">저희의 서비스에 대해 더 알고 싶거나, 맞춤형 솔루션이 필요하신가요? 언제든지 문의해 주세요!</p>
-    <div class="flex flex-row justify-center gap-4">
-        <a id="rotatingLink" href="https://open.kakao.com/o/spTIy1gh" class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition">
-            문의하기
-        </a>
+  <section id="contact" class="contact-section py-16 relative">
+    <!-- 배경 이미지와 오버레이 -->
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+         style="background-image: url(background.jpg);">
+        <div class="absolute inset-0 bg-black/70"></div>
+    </div>
+    
+    <!-- 컨텐츠 -->
+    <div class="relative z-10"> <!-- z-10으로 컨텐츠를 오버레이 위로 -->
+        <h2 class="text-3xl font-bold text-center mb-4 text-white">더 궁금하신 점이 있으신가요?</h2>
+        <p class="text-center mb-8 text-white text-2xl">저희의 서비스에 대해 더 알고 싶으시다면, 언제든지 문의해 주세요!</p>
+        <div class="flex flex-row justify-center gap-4">
+            <a id="rotatingLink" 
+               class="bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-700 transition border-2 border-transparent hover:border-white">
+                문의하기
+            </a>
+        </div>
     </div>
 </section>
 
@@ -402,12 +429,33 @@
 
    
     const header = document.querySelector('header');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navIcon = document.querySelector('.nav-icon');
+    const logo = document.querySelector('.white-filter');
+    const heroSection = document.querySelector('#hero');
+    
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 20) {
-        header.classList.add('shadow-md');
-      } else {
-        header.classList.remove('shadow-md');
-      }
+        if (window.scrollY === 0) {  // 스크롤 위치가 맨 위일 때만
+            // 히어로 섹션 위에 있을 때 (최상단)
+            header.classList.add('header-transparent');
+            header.classList.remove('header-solid');
+            navLinks.forEach(link => {
+                link.classList.add('text-white-important');
+            });
+            navIcon.classList.add('text-white-important');
+            logo.style.filter = 'brightness(0) invert(1)'; // 로고 흰색으로
+        } else {  // 조금이라도 스크롤되면
+            // 히어로 섹션을 지나갔을 때 (스크롤 다운)
+            header.classList.remove('header-transparent');
+            header.classList.add('header-solid');
+            navLinks.forEach(link => {
+                link.classList.remove('text-white-important');
+                link.style.color = '#4B5563'; // text-gray-600 색상
+            });
+            navIcon.classList.remove('text-white-important');
+            navIcon.style.color = '#4B5563'; // 메뉴 아이콘도 회색으로
+            logo.style.filter = 'none'; // 로고는 원래 색상으로
+        }
     });
   </script>
 
