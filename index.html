@@ -20,23 +20,20 @@
       opacity: 1;
       transform: translateY(0);
     }
-    /* 로고 이미지 필터 (흰색으로 변경) */
+ 
     .white-filter {
         filter: brightness(0) invert(1);
     }
-    
-    /* 투명 헤더 스타일 */
+      
     .header-transparent {
         background-color: transparent;
     }
-    
-    /* 불투명 헤더 스타일 */
+       
     .header-solid {
         background-color: white;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-
-    /* 흰색 텍스트 */
+    
     .text-white-important {
         color: white !important;
     }
@@ -57,6 +54,15 @@
         <a href="#strengths" class="text-base font-bold text-white hover:text-red-600 nav-link text-white-important">특징</a>
         <a href="#services" class="text-base font-bold text-white hover:text-red-600 nav-link text-white-important">서비스</a>
         <a href="#contact" class="bg-red-600 font-bold text-white px-4 py-2 rounded-full">문의하기</a>
+        <a href="http://pf.kakao.com/_myebn" 
+           target="_blank" 
+           class="bg-yellow-400 hover:bg-yellow-500 font-bold text-black px-4 py-2 rounded-full flex items-center gap-2">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 3C6.48 3 2 6.48 2 12c0 5.52 4.48 10 10 10s10-4.48 10-10c0-5.52-4.48-10-10-10zM12 21c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+            <path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4z"/>
+          </svg>
+          채널문의
+        </a>
       </nav>
 
       <!-- Mobile menu button -->
@@ -374,15 +380,14 @@
 
 
 <!-- 8) Services report -->
-  <section id="contact" class="contact-section py-16 relative">
-    <!-- 배경 이미지와 오버레이 -->
+  <section id="contact" class="contact-section py-16 relative">    
     <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" 
          style="background-image: url(background.jpg);">
         <div class="absolute inset-0 bg-black/70"></div>
     </div>
     
     <!-- 컨텐츠 -->
-    <div class="relative z-10"> <!-- z-10으로 컨텐츠를 오버레이 위로 -->
+    <div class="relative z-10"> 
         <h2 class="text-3xl font-extrabold text-center mb-4 text-white">더 궁금하신 점이 있으신가요?</h2>
         <p class="text-center mb-8 text-white text-2xl font-bold">저희의 서비스에 대해 더 알고 싶으시다면, 언제든지 문의해 주세요!</p>
         <div class="flex flex-row justify-center gap-4">
@@ -435,26 +440,24 @@
     const heroSection = document.querySelector('#hero');
     
     window.addEventListener('scroll', () => {
-        if (window.scrollY === 0) {  // 스크롤 위치가 맨 위일 때만
-            // 히어로 섹션 위에 있을 때 (최상단)
+        if (window.scrollY === 0) { 
             header.classList.add('header-transparent');
             header.classList.remove('header-solid');
             navLinks.forEach(link => {
                 link.classList.add('text-white-important');
             });
             navIcon.classList.add('text-white-important');
-            logo.style.filter = 'brightness(0) invert(1)'; // 로고 흰색으로
-        } else {  // 조금이라도 스크롤되면
-            // 히어로 섹션을 지나갔을 때 (스크롤 다운)
+            logo.style.filter = 'brightness(0) invert(1)'; 
+        } else {  
             header.classList.remove('header-transparent');
             header.classList.add('header-solid');
             navLinks.forEach(link => {
                 link.classList.remove('text-white-important');
-                link.style.color = '#4B5563'; // text-gray-600 색상
+                link.style.color = '#4B5563'; 
             });
             navIcon.classList.remove('text-white-important');
-            navIcon.style.color = '#4B5563'; // 메뉴 아이콘도 회색으로
-            logo.style.filter = 'none'; // 로고는 원래 색상으로
+            navIcon.style.color = '#4B5563'; 
+            logo.style.filter = 'none'; 
         }
     });
   </script>
@@ -466,7 +469,7 @@
       const target = parseInt(el.getAttribute('data-target'), 10);
       const suffix = el.getAttribute('data-suffix') || '';
       let current = 0;
-      const duration = 2000; // 2초 동안 애니메이션 실행
+      const duration = 2000; 
       let startTime = null;
       
       function updateCount(timestamp) {
